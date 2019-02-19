@@ -26,7 +26,7 @@ class TemperatureApp extends Component {
 
     handleFahrenheitChange(value){
         console.log("Someone changed the Fahrenheit temp to" +value)
-        if(value.target.value.match(/^\d*$/)){
+        if(value.target.value.match(/^\d*.*\d*$/)){
             this.setState({
                 temperature : value.target.value,
                 scale: "f"
